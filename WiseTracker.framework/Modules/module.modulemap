@@ -1,0 +1,6 @@
+framework module WiseTracker {
+  umbrella header "WiseTracker.h"
+
+  export *
+  module * { export * }
+}
