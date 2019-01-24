@@ -1,6 +1,5 @@
 # DOT 
-
-http://www.wisetracker.co.kr/wp-content/uploads/2017/11/Wisetracker.CI_.300-60.png
+![WiseTracker SDK]http://www.wisetracker.co.kr/wp-content/uploads/2017/11/Wisetracker.CI_.300-60.png)
 
 [![CI Status](https://img.shields.io/travis/WoncheolHeo/WiseTracker.svg?style=flat)](https://travis-ci.org/WoncheolHeo/UploadTestSample)
 [![Version](https://img.shields.io/cocoapods/v/WiseTracker.svg?style=flat)](https://cocoapods.org/pods/WiseTracker)
