@@ -1,9 +1,11 @@
 # DOT 
 
-[![CI Status](https://img.shields.io/travis/WoncheolHeo/UploadTestSample.svg?style=flat)](https://travis-ci.org/WoncheolHeo/UploadTestSample)
-[![Version](https://img.shields.io/cocoapods/v/UploadTestSample.svg?style=flat)](https://cocoapods.org/pods/UploadTestSample)
-[![License](https://img.shields.io/cocoapods/l/UploadTestSample.svg?style=flat)](https://cocoapods.org/pods/UploadTestSample)
-[![Platform](https://img.shields.io/cocoapods/p/UploadTestSample.svg?style=flat)](https://cocoapods.org/pods/UploadTestSample)
+http://www.wisetracker.co.kr/wp-content/uploads/2017/11/Wisetracker.CI_.300-60.png
+
+[![CI Status](https://img.shields.io/travis/WoncheolHeo/WiseTracker.svg?style=flat)](https://travis-ci.org/WoncheolHeo/UploadTestSample)
+[![Version](https://img.shields.io/cocoapods/v/WiseTracker.svg?style=flat)](https://cocoapods.org/pods/WiseTracker)
+[![License](https://img.shields.io/cocoapods/l/WiseTracker.svg?style=flat)](https://cocoapods.org/pods/WiseTracker)
+[![Platform](https://img.shields.io/cocoapods/p/WiseTracker.svg?style=flat)](https://cocoapods.org/pods/WiseTracker)
 
 ## Example
 
