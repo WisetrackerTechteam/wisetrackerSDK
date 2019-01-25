@@ -1,4 +1,4 @@
-# DOT 
+# WiseTracker 
 ![WiseTracker SDK](http://www.wisetracker.co.kr/wp-content/uploads/2017/11/Wisetracker.CI_.300-60.png)
 
 [![Version](https://img.shields.io/cocoapods/v/WiseTracker.svg?style=flat)](https://cocoapods.org/pods/WiseTracker)
