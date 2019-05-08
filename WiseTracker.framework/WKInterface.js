@@ -1,5 +1,9 @@
 var WiseTracker = {
     
+    /** returnValue **/
+    wtRetVal:function(returnValue){
+        return returnValue;
+    },
     /** endStartPage **/
     endStartPage:function(key){
         var messgeToPost = {"function":"endStartPage", "key":key};
@@ -83,6 +87,24 @@ var WiseTracker = {
         var messgeToPost = {"function":"setOrderSearchKeywordArray","ikwd":ikwd};
         window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
     },
+    
+    useIkwdWithConversion:function(target){
+        var messgeToPost = {"function":"useIkwdWithConversion","target":target};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    useMvt1WithConversion:function(target){
+        var messgeToPost = {"function":"useMvt1WithConversion","target":target};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    useMvt2WithConversion:function(target){
+        var messgeToPost = {"function":"useMvt2WithConversion","target":target};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    useMvt3WithConversion:function(target){
+        var messgeToPost = {"function":"useMvt3WithConversion","target":target};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    
     setSearchKeywordById:function(pageId,ikwd){
         var messgeToPost = {"function":"setSearchKeywordById","pageId":pageId, "ikwd":ikwd};
         window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
@@ -158,6 +180,15 @@ var WiseTracker = {
         var messgeToPost = {"function":"setProductById","pageId":pageId, "pnc":pnc, "pncNm":pncNm};
         window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
     },
+    /** setGoalPageIdentity **/
+    setGoalPageIdentity:function(pi){
+        var messgeToPost = {"function":"setGoalPageIdentity", "pi":pi};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    setGoalPageIdentityById:function(pageId,pi){
+        var messgeToPost = {"function":"setGoalPageIdentityById","pageId":pageId, "pi":pi};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
     setGoalProduct:function(pnc){
         var messgeToPost = {"function":"setGoalProduct", "pnc":pnc};
         window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
@@ -172,6 +203,38 @@ var WiseTracker = {
     },
     setGoalProductArrayById:function(pageId,pnc){
         var messgeToPost = {"function":"setGoalProductArrayById","pageId":pageId, "pnc":pnc};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    setGoalContents:function(cp){
+        var messgeToPost = {"function":"setGoalContents", "cp":cp};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    setGoalContentsById:function(pageId,cp){
+        var messgeToPost = {"function":"setGoalContentsById","pageId":pageId, "cp":cp};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    setGoalContentsArray:function(cp){
+        var messgeToPost = {"function":"setGoalContentsArray", "cp":cp};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    setGoalContentsArrayById:function(pageId,cp){
+        var messgeToPost = {"function":"setGoalContentsArrayById","pageId":pageId, "cp":cp};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    setOrderNPaymentId:function(value){
+        var messgeToPost = {"function":"setOrderNPaymentId", "value":value};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    setOrderNPaymentIdById:function(pageId,value){
+        var messgeToPost = {"function":"setOrderNPaymentIdById","pageId":pageId, "value":value};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    createNPaySequenceKey:function(){
+        var messgeToPost = {"function":"createNPaySequenceKey"};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    executeCallbackWithNPayKey:function(callback){
+        var messgeToPost = {"function":"executeCallbackWithNPayKey", "callback":callback};
         window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
     },
     setOrderProduct:function(pnc){
@@ -190,7 +253,23 @@ var WiseTracker = {
         var messgeToPost = {"function":"setOrderProductArrayById","pageId":pageId, "pnc":pnc};
         window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
     },
-        
+    
+    setOrderContents:function(cp){
+        var messgeToPost = {"function":"setOrderContents", "cp":cp};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    setOrderContentsById:function(pageId,cp){
+        var messgeToPost = {"function":"setOrderContentsById","pageId":pageId, "cp":cp};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    setOrderContentsArray:function(cp){
+        var messgeToPost = {"function":"setOrderContentsArray", "cp":cp};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    setOrderContentsArrayById:function(pageId,cp){
+        var messgeToPost = {"function":"setOrderContentsArrayById","pageId":pageId, "cp":cp};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
     
     /** product category **/
     setProductCategory:function(png,pngNm){
@@ -311,6 +390,10 @@ var WiseTracker = {
         var messgeToPost = {"function":"setOrderConversionDataArrayById", "key":key, "pageId":pageId, "amount":amount};
         window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
     },
+    setInternalEvent:function(icmp){
+        var messgeToPost = {"function":"setInternalEvent", "icmp":icmp};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
     
     /** Quantity **/
     setOrderQuantity:function(quantity){
@@ -332,6 +415,11 @@ var WiseTracker = {
     /** click event **/
     sendClickData:function(eventCode, eventName){
         var messgeToPost = {"function":"sendClickData","eventCode":eventCode, "eventName":eventName};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    /** sendTransaction **/
+    sendGoalData:function(){
+        var messgeToPost = {"function":"sendGoalData"};
         window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
     },
     /**
@@ -404,5 +492,7 @@ var WiseTracker = {
     USER_ATTRIBUTE_5:"uvp5",
     USER_ATTRIBUTE_6:"memLvl",
     USER_ATTRIBUTE_7:"memCd",
-    USER_ID:"userId"
+    USER_ID:"userId",
+    NPAY_KEY:"",
+    NPAY_KEY_TMP:""
 };

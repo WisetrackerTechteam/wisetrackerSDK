@@ -39,12 +39,14 @@
 - (void)putUvp4:(NSString *)uvp4;
 - (void)putUvp5:(NSString *)uvp5;
 - (void)putUserId:(NSString *)userId;
+- (void)putExhibitData:(NSDictionary*)dic;
 - (NSString *)getUvp1;
 - (NSString *)getUvp2;
 - (NSString *)getUvp3;
 - (NSString *)getUvp4;
 - (NSString *)getUvp5;
 - (NSString *)getUserId;
+- (NSMutableDictionary*)getExhibitData;
 - (NSInteger)getLtrvnc;
 - (NSInteger)getLtrvni;
 - (void)notifyLtrvnc;

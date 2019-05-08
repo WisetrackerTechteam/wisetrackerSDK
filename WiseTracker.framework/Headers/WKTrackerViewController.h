@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@import WebKit;
 @interface WKTrackerViewController : UIViewController
+@property(strong,nonatomic) WKWebView* webView;
 + (WKTrackerViewController *)sharedInstance;
 -(NSString*)eventTriggeredScriptToAddToDocument;
 @end

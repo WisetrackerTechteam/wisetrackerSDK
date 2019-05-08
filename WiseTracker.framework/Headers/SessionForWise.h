@@ -18,7 +18,7 @@
 //세션 초기화시, 초기값 설정
 -(void)applySessionData;
 -(void)putInitSessionData:(NSString*) key value:(NSString*) value;
-
+-(NSDictionary*)getSessionInitData;
 @end
 
 

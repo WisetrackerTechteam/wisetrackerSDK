@@ -44,4 +44,5 @@
 -(NSMutableDictionary*) putAdProfile:(NSMutableDictionary*) sessionJson isInstallData:(BOOL)flagInstall;
 -(long)getLtvt;
 -(void)sendClickDataImmediately:(NSDictionary*) clickData;
+-(void)sendGoalDataImmediately:(NSMutableDictionary*) goalData;
 @end

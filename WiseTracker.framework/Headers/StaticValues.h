@@ -308,4 +308,8 @@
 
 +(NSString*) SAR_INFO;
 
++(NSString*) PARAM_WEBVIEW_URL;
++(NSString*) PARAM_WEBVIEW_LOAD_TIME;
++(NSString*) PARAM_NPAY_ID;
+
 @end

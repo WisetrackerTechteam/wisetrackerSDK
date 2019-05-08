@@ -16,4 +16,5 @@
 -(NSInteger)size;
 -(void)poll;
 -(NSString *)peek:(NSInteger)idx;
+-(NSArray*)toArray;
 @end

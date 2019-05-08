@@ -53,4 +53,6 @@
 - (BSMap *)send;
 - (void)writeToTargetQueue;
 - (void)clearPageMapData;
+- (NSMutableDictionary *)getGoalMap;
+- (void)clearGoalMapData;
 @end
