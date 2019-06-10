@@ -22,7 +22,7 @@
 
 ### - CocoaPod Install
 
-- XCode CocoaPad 환경에서 SDK 다운로드 방법
+- XCode CocoaPod 환경에서 SDK 다운로드 방법
 
 
 XCode 프로젝트 파일중 Podfile 파일에 다음과 같이 SDK를 추가합니다.
@@ -34,7 +34,7 @@ pod 'WiseTracker'
 기존에 SDK를 한번 설치한 경우에는 설치할SDK 버전을 표시해야 하는 경우도 있습니다. 아래와 같이 설치할 SDK버전을 명시적으로 표시하면 됩니다.
 
 ```
-pod 'WiseTracker', '~> 21.3.3'
+pod 'WiseTracker', '~> 21.3.5'
 ```
 
 Podfile 에 해당라인을 추가한 후 Terminal 프로그램을 실행하여 다음의 명령을 수행합니다.
@@ -42,8 +42,9 @@ Podfile 에 해당라인을 추가한 후 Terminal 프로그램을 실행하여 
 cmd> pod install
 ```
 
-만약 Cocoapad 환경의 프로젝트가 아닌 경우에는, 아래 방법을 사용해 주세요.
-아래 5번부터는 공통으로 적용해야하는 부분입니다.
+만약 Cocoapod 환경의 프로젝트가 아닌 경우에는, 아래 방법을 사용해 주세요.
+
+**아래 5번부터는 공통으로 적용해야하는 부분입니다.**
 
 ### - Github Download
 
@@ -787,12 +788,12 @@ FBSDKAppLinkUtility.fetchDeferredAppLink({ url, error in
 ![](http://www.wisetracker.co.kr/wp-content/uploads/2018/01/fb113.png)
 
 
-### 1. 테스트할 앱을 선택한 후 페이지 하단 Developer Tool의 Test Deep Link를 클릭합니다.
+#### 1. 테스트할 앱을 선택한 후 페이지 하단 Developer Tool의 Test Deep Link를 클릭합니다.
 
 ![](http://www.wisetracker.co.kr/wp-content/uploads/2018/01/fb115.jpg)
 
-### 2. 테스트 디바이스에 앱이 설치되어 있다면 삭제합니다.
-### 3. 열어 놓은 Facebook 테스트 페이지로 돌아갑니다. 앱 설치 광고 등록 시 사용한 딥 링크를 Send Deep Link 영역에 입력 후 Send to iOS 버튼을 클릭합니다. 이 때 Send Deferred는 반드시 체크되어 있어야 합니다.
+#### 2. 테스트 디바이스에 앱이 설치되어 있다면 삭제합니다.
+#### 3. 열어 놓은 Facebook 테스트 페이지로 돌아갑니다. 앱 설치 광고 등록 시 사용한 딥 링크를 Send Deep Link 영역에 입력 후 Send to iOS 버튼을 클릭합니다. 이 때 Send Deferred는 반드시 체크되어 있어야 합니다.
 
 ![](http://www.wisetracker.co.kr/wp-content/uploads/2018/01/fb116.jpg)
 
