@@ -10,7 +10,6 @@
 	* [WebView 설정](./README.md#WISETRACKER_WEBVIEW)
 	* [Cordova를 위한 설정](./README.md#WISETRACKER_CORDOVA)
 	* [필수연동 API](./README.md#WISETRACKER_BASE)
-	* [Premium 연동 API](./README.md#WISETRACKER_PREMIUM)
 	* [Facebook 광고성과 분석을 위한 설정](./README.md#WISETRACKER_FACEBOOK)
 	* [WAFI 설정](./README.md#WISETRACKER_WAFI)
 
