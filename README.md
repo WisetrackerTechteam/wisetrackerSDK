@@ -4,14 +4,14 @@
 
 # Index
 * [WiseTracker](./README.md#DOT)
-	* [SDK 삽입과 프로젝트 설정](./README.md#WISETRACKER_INSTALL)
-		* [CocoaPod Install](./README.md#WISETRACKER_COCOAPOD)
-		* [Github Download](./README.md#WISETRACKER_GITHUB)
-	* [WebView 설정](./README.md#WISETRACKER_WEBVIEW)
-	* [Cordova를 위한 설정](./README.md#WISETRACKER_CORDOVA)
-	* [필수연동 API](./README.md#WISETRACKER_BASE)
-	* [Facebook 광고성과 분석을 위한 설정](./README.md#WISETRACKER_FACEBOOK)
-	* [WAFI 설정](./README.md#WISETRACKER_WAFI)
+	* [SDK 삽입과 프로젝트 설정](#WISETRACKER_INSTALL)
+		* [CocoaPod Install](#WISETRACKER_COCOAPOD)
+		* [Github Download](#WISETRACKER_GITHUB)
+	* [WebView 설정](#WISETRACKER_WEBVIEW)
+	* [Cordova를 위한 설정](#WISETRACKER_CORDOVA)
+	* [필수연동 API](#WISETRACKER_BASE)
+	* [Facebook 광고성과 분석을 위한 설정](#WISETRACKER_FACEBOOK)
+	* [WAFI 설정](#WISETRACKER_WAFI)
 
 	
 	
