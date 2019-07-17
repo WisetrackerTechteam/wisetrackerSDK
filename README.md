@@ -6,7 +6,6 @@
 * [WiseTracker](./README.md#DOT)
 	* [SDK 삽입과 프로젝트 설정](#WISETRACKER_INSTALL)
 		* [CocoaPod Install](#WISETRACKER_COCOAPOD)
-		* [Github Download](#WISETRACKER_GITHUB)
 	* [WebView 설정](#WISETRACKER_WEBVIEW)
 	* [Cordova를 위한 설정](#WISETRACKER_CORDOVA)
 	* [필수연동 API](#WISETRACKER_BASE)
