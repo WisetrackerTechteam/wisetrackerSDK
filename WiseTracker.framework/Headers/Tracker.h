@@ -96,6 +96,8 @@
 - (void)putSessionData:(NSString *)key value:(NSString *)value;
 - (BSMap*)putSessionReferrer:(NSString*)referrer;
 - (BOOL)updateDocument;
+- (void)putAdMarketingParam:(NSString*)type code:(NSString*)code;
+- (void)putAdMarketingParam:(NSString*)type code:(NSString*)code period:(NSNumber*)period;
 - (void)putPageParam:(id)obj ParamName:(NSString *)ParamName paramValue:(id)paramValue;
 - (BSMap *)builder;
 - (BSMap *)builder:(id)obj;

@@ -14,6 +14,42 @@ var WiseTracker = {
         var messgeToPost = {"function":"sendTransaction"};
         window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
     },
+    /** setAdChannel **/
+    setAdChannel:function(code){
+        var messgeToPost = {"function":"setAdChannel", "code":code};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    setAdChannelPeriod:function(code, period){
+        var messgeToPost = {"function":"setAdChannelPeriod", "code":code, "period":period};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    /** setAdCampaign **/
+    setAdCampaign:function(code){
+        var messgeToPost = {"function":"setAdCampaign", "code":code};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    setAdCampaignPeriod:function(code, period){
+        var messgeToPost = {"function":"setAdCampaignPeriod", "code":code, "period":period};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    /** setAdKeyword **/
+    setAdKeyword:function(code){
+        var messgeToPost = {"function":"setAdKeyword", "code":code};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    setAdKeywordPeriod:function(code, period){
+        var messgeToPost = {"function":"setAdKeywordPeriod", "code":code, "period":period};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    /** setAdType **/
+    setAdType:function(code){
+        var messgeToPost = {"function":"setAdType", "code":code};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    setAdTypePeriod:function(code, period){
+        var messgeToPost = {"function":"setAdTypePeriod", "code":code, "period":period};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
     /** setGoal **/
     setGoal:function(key, value){
         var messgeToPost = {"function":"setGoal", "key":key, "value":value};

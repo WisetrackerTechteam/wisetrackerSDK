@@ -37,7 +37,7 @@ typedef uint_least32_t char32_t;
 typedef struct _NSZone NSZone;
 
 //WiseTracker Version
-#define WISETRACKER_SDK_VERSION @"21.3.5"
+#define WISETRACKER_SDK_VERSION @"21.3.6"
 
 @interface WiseTrackerCore : NSObject
 + (UIApplication *)application;
@@ -90,6 +90,14 @@ typedef struct _NSZone NSZone;
 + (BSMap *)putRevenueDataArray:(NSString *)key value:(id)value;
 + (void)putSessionData:(NSString *)key value:(NSString *)value;
 + (BSMap *)putSessionReferrer:(NSString *)referrer;
++ (void) setAdChannel:(NSString*)code;
++ (void) setAdChannel:(NSString*)code period:(NSNumber*)period;
++ (void) setAdCampaign:(NSString*)code;
++ (void) setAdCampaign:(NSString*)code period:(NSNumber*)period;
++ (void) setAdKeyword:(NSString*)code;
++ (void) setAdKeyword:(NSString*)code period:(NSNumber*)period;
++ (void) setAdType:(NSString*)code;
++ (void) setAdType:(NSString*)code period:(NSNumber*)period;
 + (void)setGoal:(NSString *)key value:(NSNumber*)value;
 + (void)setAcceptPushReceived:(BOOL)value;
 + (void)setGoalPageIdentity:(NSString*)value;
