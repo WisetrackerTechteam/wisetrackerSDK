@@ -21,10 +21,9 @@
 
 ### <a id="WISETRACKER_COCOAPOD"></a>- CocoaPod Install
 
-- XCode CocoaPod 환경에서 SDK 다운로드 방법
 
 
-XCode 프로젝트 파일중 Podfile 파일에 다음과 같이 SDK를 추가합니다.
+#### 1. XCode 프로젝트 파일중 Podfile 파일에 다음과 같이 SDK를 추가합니다.
 
 ```
 pod 'WiseTracker'
@@ -41,39 +40,7 @@ Podfile 에 해당라인을 추가한 후 Terminal 프로그램을 실행하여 
 cmd> pod install
 ```
 
-만약 Cocoapod 환경의 프로젝트가 아닌 경우에는, 아래 방법을 사용해 주세요.
-
-**아래 5번부터는 공통으로 적용해야하는 부분입니다.**
-
-### <a id="WISETRACKER_GITHUB"></a> - Github Download
-
-#### 1. 아래 링크로 접속하여 최신버전 SDK를 선택합니다.
-
-[Wisetracker Mobile Analytics SDK 다운로드 받기](https://github.com/WisetrackerTechteam/wisetrackerSDK)
-
-#### 2. iOS용 SDK인 WiseTracker.framework.zip을 선택하여 다운로드 합니다.
-
-![](http://www.wisetracker.co.kr/wp-content/uploads/2018/01/sdk003.png "")
-
-다운로드한 파일의 압축을 해제하면 되며, 포함된 파일 중 중요 파일에 대한 설명은 다음과 같습니다.
-
-- iosGetFkey.html : Fingerprint를 위한 HTML 페이지
-- WiseTracker.framework : iOS SDK
-- WKInterface.js : WKWebView용 인터페이스 파일
-
-#### 3. WiseTracker.framework를 Xcode에 추가합니다.
-##### 1) Project – Target – BuildPhase – Link Binary With Libraries의 “+” 버튼을 클릭합니다.
-##### 2) 팝업창에 Add Other에서 SDK를 추가하고 확인 버튼을 클릭합니다.
-
-![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/6274/8379/ckfinder/images/002.jpg?dc=201702100612-24 "")
-
-#### 4. 다운로드한 파일 중 ‘iosGetFkey.html’을 프로젝트에 추가합니다.
-##### 1) Project – Target – BuildPhase – Copy Bundle Resources의 “+” 버튼 클릭
-##### 2) iosGetFkey.html 선택
-
-![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/6274/8379/ckfinder/images/003.png?dc=201702100613-12)
-
-#### 5. iOS에서 제공하는 라이브러리와 Build Settings에 설정을 추가합니다.
+#### 2. iOS에서 제공하는 라이브러리와 Build Settings에 설정을 추가합니다.
 ##### 1) Project – Target – BuildPhase – Link Binary With Libraries의 “+” 버튼을 클릭해 다음 4가지 라이브러리를 추가합니다.
  - CoreTelephony.framework
  - Systemconfigureation.framework
@@ -86,7 +53,7 @@ cmd> pod install
 
 ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/6274/8379/ckfinder/images/005.jpg?dc=201702100618-18)
 
-#### 6. 아래의 방법을 따라 AppKey를 복사한 뒤 적용합니다.
+#### 3. 아래의 방법을 따라 AppKey를 복사한 뒤 적용합니다.
 
 #### 1) [http://report.wisetracker.co.kr](http://report.wisetracker.co.kr)에 로그인 합니다.
 
