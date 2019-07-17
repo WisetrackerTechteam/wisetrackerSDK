@@ -85,7 +85,7 @@ func application(application: UIApplication, didFinishLaunchingWithOptionslaunch
 }
 ```
 
-#### 7. 광고를 통해 앱을 실행할 경우에도 패키지명, Referrer 값을 수신할 수 있도록 Project 파일에 설정정보를 추가합니다.
+#### 6. 광고를 통해 앱을 실행할 경우에도 패키지명, Referrer 값을 수신할 수 있도록 Project 파일에 설정정보를 추가합니다.
 
 - Objective-C
 
