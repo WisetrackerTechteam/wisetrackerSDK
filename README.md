@@ -33,7 +33,7 @@ pod 'WiseTracker'
 기존에 SDK를 한번 설치한 경우에는 설치할SDK 버전을 표시해야 하는 경우도 있습니다. 아래와 같이 설치할 SDK버전을 명시적으로 표시하면 됩니다.
 
 ```
-pod 'WiseTracker', '~> 21.3.5'
+pod 'WiseTracker', '~> 21.3.6'
 ```
 
 Podfile 에 해당라인을 추가한 후 Terminal 프로그램을 실행하여 다음의 명령을 수행합니다.
@@ -49,7 +49,7 @@ cmd> pod install
 
 #### 1. 아래 링크로 접속하여 최신버전 SDK를 선택합니다.
 
-[Wisetracker Mobile Analytics SDK 다운로드 받기](https://github.com/WisetrackerTechteam/SDK)
+[Wisetracker Mobile Analytics SDK 다운로드 받기](https://github.com/WisetrackerTechteam/wisetrackerSDK)
 
 #### 2. iOS용 SDK인 WiseTracker.framework.zip을 선택하여 다운로드 합니다.
 
