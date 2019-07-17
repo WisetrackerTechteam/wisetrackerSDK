@@ -19,7 +19,7 @@
 
 ## <a id="WISETRACKER_INSTALL"></a> SDK 다운로드 및 설치
 
-### - CocoaPod Install
+### <a id="WISETRACKER_COCOAPOD"></a>- CocoaPod Install
 
 - XCode CocoaPod 환경에서 SDK 다운로드 방법
 
@@ -45,7 +45,7 @@ cmd> pod install
 
 **아래 5번부터는 공통으로 적용해야하는 부분입니다.**
 
-### - Github Download
+### <a id="WISETRACKER_GITHUB"></a> - Github Download
 
 #### 1. 아래 링크로 접속하여 최신버전 SDK를 선택합니다.
 
