@@ -8,6 +8,7 @@
 		* [CocoaPod Install](#WISETRACKER_COCOAPOD)
 	* [WebView 설정](#WISETRACKER_WEBVIEW)
 	* [Cordova를 위한 설정](#WISETRACKER_CORDOVA)
+	* [Unity를 위한 설정](#WISETRACKER_UNITY)
 	* [필수연동 API](#WISETRACKER_BASE)
 	* [Facebook 광고성과 분석을 위한 설정](#WISETRACKER_FACEBOOK)
 	* [WAFI 설정](#WISETRACKER_WAFI)
@@ -243,6 +244,14 @@ var app = {
 
 app.initialize();
 ```
+## <a id="WISETRACKER_UNITY"></a> Unity를 위한 설정
+ 플러그인 다운받기(https://github.com/WisetrackerTechteam/tracker-unity-plugin/blob/master/trackerUnityPlugin.unitypackage)
+ 
+다운로드 받은 WiseTracker.unitypacage 파일을 프로젝트에 Import 해야합니다.
+Unity Tools에서 Assets > Import Package > Custom Package 메뉴를 클릭하고 Package파일을 선택해주세요.
+![](http://www.wisetracker.co.kr/wp-content/uploads/2019/08/unity_menu.png)
+
+![](http://www.wisetracker.co.kr/wp-content/uploads/2019/08/unity_file.png)
 
 ## <a id="WISETRACKER_BASE"></a> 필수연동 API
 필수연동 API는 Wisetracker의 기본기능을 활용하기 위해 반드시 적용해야 하는 코드들로 이루어져 있습니다. 필수연동 API의 코드들을 모두 적용할 것을 권장합니다.
