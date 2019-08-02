@@ -249,8 +249,8 @@ app.initialize();
  
 다운로드 받은 WiseTracker.unitypacage 파일을 프로젝트에 Import 해야합니다.
 Unity Tools에서 Assets > Import Package > Custom Package 메뉴를 클릭하고 Package파일을 선택해주세요.
-![](http://www.wisetracker.co.kr/wp-content/uploads/2019/08/unity_menu.png)
-
+//![](http://www.wisetracker.co.kr/wp-content/uploads/2019/08/unity_menu.png)
+<img src="http://www.wisetracker.co.kr/wp-content/uploads/2019/08/unity_menu.png" width="200">
 ![](http://www.wisetracker.co.kr/wp-content/uploads/2019/08/unity_file.png)
 
 ## <a id="WISETRACKER_BASE"></a> 필수연동 API
