@@ -257,10 +257,15 @@ Unity Tools에서 Assets > Import Package > Custom Package 메뉴를 클릭하�
 ![](http://www.wisetracker.co.kr/wp-content/uploads/2019/08/unity_file.png)
 
 
-## <a id="WISETRACKER_WISETRACKER_REACTNATIVE"></a> ReactNative를 위한 설정
+## <a id="WISETRACKER_REACTNATIVE"></a> ReactNative를 위한 설정
 리액트 네이티브 프로젝트 폴더에 터미널로 들어가서 다음의 명령줄을 실행시켜서 리액트 네이티브용 플러그인을 설치합니다.
 
 npm install --save git+https://github.com/WisetrackerTechteam/tracker-react-plugin.git
+
+명령어가 정상적으로 수행되었으면 프로젝트 node_module 폴더에 아래와 같이 설치되었음을 확인할 수 있습니다.
+
+![](http://www.wisetracker.co.kr/wp-content/uploads/2019/08/react_node.png)
+
 
 ## <a id="WISETRACKER_BASE"></a> 필수연동 API
 필수연동 API는 Wisetracker의 기본기능을 활용하기 위해 반드시 적용해야 하는 코드들로 이루어져 있습니다. 필수연동 API의 코드들을 모두 적용할 것을 권장합니다.
