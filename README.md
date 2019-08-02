@@ -251,7 +251,7 @@ app.initialize();
 다운로드 받은 WiseTracker.unitypacage 파일을 프로젝트에 Import 해야합니다.
 Unity Tools에서 Assets > Import Package > Custom Package 메뉴를 클릭하고 Package파일을 선택해주세요.
 
-<img src="http://www.wisetracker.co.kr/wp-content/uploads/2019/08/unity_menu.png" width="320" height="400">
+<img src="http://www.wisetracker.co.kr/wp-content/uploads/2019/08/unity_menu.png" width="320" height="370">
 
 
 ![](http://www.wisetracker.co.kr/wp-content/uploads/2019/08/unity_file.png)
@@ -264,7 +264,7 @@ npm install --save git+https://github.com/WisetrackerTechteam/tracker-react-plug
 
 명령어가 정상적으로 수행되었으면 프로젝트 node_module 폴더에 아래와 같이 설치되었음을 확인할 수 있습니다.
 
-<img src="http://www.wisetracker.co.kr/wp-content/uploads/2019/08/react_node.png" width="320" height="400">
+<img src="http://www.wisetracker.co.kr/wp-content/uploads/2019/08/react_node.png" width="400" height="400">
 
 ## <a id="WISETRACKER_BASE"></a> 필수연동 API
 필수연동 API는 Wisetracker의 기본기능을 활용하기 위해 반드시 적용해야 하는 코드들로 이루어져 있습니다. 필수연동 API의 코드들을 모두 적용할 것을 권장합니다.
