@@ -239,7 +239,7 @@ var app = {
 		**/
 		cordova.plugins.WiseTrackerCordovaBridge.setWisetrackerAppkey("제공받은 앱 인증키를 설정합니다.");
 		cordova.plugins.WiseTrackerCordovaBridge.init(); 
-		WiseTracker.startPage();
+		WiseTracker.startPage("pageId"); //해당 페이지를 구분할 수 있는 식별자(ex: pageUrl)
     }
 };
 
