@@ -201,13 +201,11 @@ $ plugman install -d --platform ios --project [프로젝트경로]/platforms/ios
 ### 3. SDK 초기 설정
 SDK 설치가 완료되면 Xcode에 다음과 같이 SDK 사용을 위한 파일이 추가된 것을 확인합니다.
 
-![](http://www.wisetracker.co.kr/wp-content/uploads/2019/08/cordova_folder.png)
-
+![](http://www.wisetracker.co.kr/wp-content/uploads/2019/08/cordova_index.png)
 
 다음으로, Cordova 프로젝트의 index.js 파일에 SDK를 초기화하는 코드를 추가합니다.
 
-![](http://www.wisetracker.co.kr/wp-content/uploads/2019/08/cordova_index.png)
-
+![](http://www.wisetracker.co.kr/wp-content/uploads/2019/08/cordova_folder.png)
 - index.js 코드 예시
 
 ```java script
