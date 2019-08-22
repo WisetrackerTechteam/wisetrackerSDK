@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-@import WebKit;
+#import <WebKit/WebKit.h>
 @interface WKTrackerViewController : UIViewController
 @property(strong,nonatomic) WKWebView* webView;
 + (WKTrackerViewController *)sharedInstance;

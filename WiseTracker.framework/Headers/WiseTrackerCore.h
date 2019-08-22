@@ -26,7 +26,7 @@ FOUNDATION_EXPORT const unsigned char WiseTrackerVersionString[];
 #import "BSConfig.h"
 #import "WKTrackerViewController.h"
 //#include "Tracker.h"
-@import WebKit;
+#import <WebKit/WebKit.h>
 
 #if defined(__has_include) && __has_include(<uchar.h>)
 # include <uchar.h>
@@ -37,7 +37,7 @@ typedef uint_least32_t char32_t;
 typedef struct _NSZone NSZone;
 
 //WiseTracker Version
-#define WISETRACKER_SDK_VERSION @"21.3.6"
+#define WISETRACKER_SDK_VERSION @"21.3.7"
 
 @interface WiseTrackerCore : NSObject
 + (UIApplication *)application;
