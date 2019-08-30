@@ -60,6 +60,13 @@
 +(NSString*) RECENT_ORDER_PTM;
 +(NSString*) SESSION_FILE_PREFIX;
 +(NSString*) PARAM_PNC_TP;
+
+//2019.08.26 by Woncheol
++(NSString*) PARAM_PNC_TP2;
++(NSString*) PARAM_PNC_TP3;
++(NSString*) PARAM_PNC_TP4;
++(NSString*) PARAM_PNC_TP5;
+
 +(NSString*) PARAM_MTV;
 +(NSString*) START_TIME;
 +(NSString*) END_TIME;

@@ -465,6 +465,104 @@ var WiseTracker = {
         var messgeToPost = {"function":"setPaymentTypeForOllehTv","mCd":mCd, "sCd":sCd};
         window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
     },
+
+    /**
+     * pncSubTp2 Api
+     **/
+    
+    setGoalProductType2:function(type){
+        var messgeToPost = {"function":"setGoalProductType2", "type":type};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    setGoalProductTypeArray2:function(type){
+        var messgeToPost = {"function":"setGoalProductTypeArray2", "type":type};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    setProductType2:function(type){
+        var messgeToPost = {"function":"setProductType2", "type":type};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    setOrderProductType2:function(type){
+        var messgeToPost = {"function":"setOrderProductType2", "type":type};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    setOrderProductTypeArray2:function(type){
+        var messgeToPost = {"function":"setOrderProductTypeArray2", "type":type};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    
+    /**
+     * pncSubTp3 Api
+     **/
+    setGoalProductType3:function(type){
+        var messgeToPost = {"function":"setGoalProductType3", "type":type};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    setGoalProductTypeArray3:function(type){
+        var messgeToPost = {"function":"setGoalProductTypeArray3", "type":type};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    setProductType3:function(type){
+        var messgeToPost = {"function":"setProductType3", "type":type};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    setOrderProductType3:function(type){
+        var messgeToPost = {"function":"setOrderProductType3", "type":type};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    setOrderProductTypeArray3:function(type){
+        var messgeToPost = {"function":"setOrderProductTypeArray3", "type":type};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    
+    /**
+     * pncSubTp4 Api
+     **/
+    setGoalProductType4:function(type){
+        var messgeToPost = {"function":"setGoalProductType4", "type":type};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    setGoalProductTypeArray4:function(type){
+        var messgeToPost = {"function":"setGoalProductTypeArray4", "type":type};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    setProductType4:function(type){
+        var messgeToPost = {"function":"setProductType4", "type":type};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    setOrderProductType4:function(type){
+        var messgeToPost = {"function":"setOrderProductType4", "type":type};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    setOrderProductTypeArray4:function(type){
+        var messgeToPost = {"function":"setOrderProductTypeArray4", "type":type};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    
+    /**
+     * pncSubTp4 Api
+     **/
+    setGoalProductType5:function(type){
+        var messgeToPost = {"function":"setGoalProductType5", "type":type};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    setGoalProductTypeArray5:function(type){
+        var messgeToPost = {"function":"setGoalProductTypeArray5", "type":type};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    setProductType5:function(type){
+        var messgeToPost = {"function":"setProductType5", "type":type};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    setOrderProductType5:function(type){
+        var messgeToPost = {"function":"setOrderProductType5", "type":type};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    setOrderProductTypeArray5:function(type){
+        var messgeToPost = {"function":"setOrderProductTypeArray5", "type":type};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    
     /** constant list **/
     PRODUCT_SUB_TYPE1:"TYPE1",
     PRODUCT_SUB_TYPE2:"TYPE2",
