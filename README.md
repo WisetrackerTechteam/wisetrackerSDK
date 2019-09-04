@@ -71,7 +71,7 @@ cmd> pod install
 -(BOOL)application:(UIApplication *)applicationdidFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	[WiseTracker applicationKey:@"앱의 APPKEY 삽입"];
 	[WiseTracker setApplication:application];
-	[WiseTracker initEnd];
+	[WiseTracker initEnd:launchOptions];
 	return YES;
 }
 ```
@@ -82,7 +82,7 @@ cmd> pod install
 func application(application: UIApplication, didFinishLaunchingWithOptionslaunchOptions: [NSObject: AnyObject]?) -&gt;Bool {
 	WiseTracker.applicationKey("앱의 APPKEY 삽입")
 	WiseTracker.setApplication(application)
-	WiseTracker.initEnd()
+	WiseTracker.initEnd(launchOptions)
 	return true
 }
 ```
@@ -93,9 +93,6 @@ func application(application: UIApplication, didFinishLaunchingWithOptionslaunch
 
 ```Objective-C
 -(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
-	[WiseTracker applicationKey:@"앱의 APPKEY 삽입"];
-	[WiseTracker setApplication:application];
-	[WiseTracker initEnd];
 	[WiseTracker urlRefererCheck:sourceApplication url:url];
 	return YES;
 }
@@ -105,9 +102,6 @@ func application(application: UIApplication, didFinishLaunchingWithOptionslaunch
 
 ```Swift
 func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) ->Bool {
-	WiseTracker.applicationKey("앱의 APPKEY 삽입")
-	WiseTracker.setApplication(application)
-	WiseTracker.initEnd()
 	WiseTracker.urlRefererCheck(sourceApplication,url: url)
 	return true
 }
