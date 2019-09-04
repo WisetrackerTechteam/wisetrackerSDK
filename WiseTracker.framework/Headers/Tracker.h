@@ -50,7 +50,7 @@
 - (void)endPage:(id)obj;
 - (void)scheduleSendMode;
 - (void)scheduleSend;
-- (void)initEnd;
+- (void)initEnd:(NSDictionary *)launchOptions;
 - (instancetype)init;
 - (void)clearInitData;
 - (Tracker *)putInitData:(NSString *)key value:(NSString *)value;

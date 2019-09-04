@@ -37,7 +37,7 @@ typedef uint_least32_t char32_t;
 typedef struct _NSZone NSZone;
 
 //WiseTracker Version
-#define WISETRACKER_SDK_VERSION @"21.3.8"
+#define WISETRACKER_SDK_VERSION @"21.3.9"
 
 @interface WiseTrackerCore : NSObject
 + (UIApplication *)application;
@@ -68,7 +68,7 @@ typedef struct _NSZone NSZone;
 + (void)putInitData:(NSString *)key value:(NSString *)value;
 //+ (void)checkReferrer:(NSString *)referrer;
 + (void)checkReferrerSet:(NSDictionary *)jsonDic;
-+ (void)initEnd;
++ (void)initEnd:(NSDictionary *)launchOptions;
 + (BOOL)sendTransaction;
 + (BOOL)sendTransactionImmediate;
 + (BSMap *)builder:(id)obj;
