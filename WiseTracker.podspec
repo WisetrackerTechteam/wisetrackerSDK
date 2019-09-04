@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "WiseTracker"
-  s.version      = "21.3.9"
+  s.version      = "21.3.10"
   s.summary      = "SDK of WiseTracker."
   s.description  = <<-DESC
                    This is Wisetracker's SDK which tracks app and mobile attribution.
