@@ -252,7 +252,9 @@ Unity Tools에서 Assets > Import Package > Custom Package 메뉴를 클릭하�
 ## <a id="WISETRACKER_REACTNATIVE"></a> ReactNative를 위한 설정
 리액트 네이티브 프로젝트 폴더에 터미널로 들어가서 다음의 명령줄을 실행시켜서 리액트 네이티브용 플러그인을 설치합니다.
 
-npm install --save git+https://github.com/WisetrackerTechteam/tracker-react-plugin.git
+```shell
+$ npm install --save git+https://github.com/WisetrackerTechteam/Tracker-react-package.git
+```
 
 명령어가 정상적으로 수행되었으면 프로젝트 node_module 폴더에 아래와 같이 설치되었음을 확인할 수 있습니다.
 
