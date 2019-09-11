@@ -101,7 +101,7 @@ func application(application: UIApplication, didFinishLaunchingWithOptionslaunch
 - Swift
 
 ```Swift
-func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) ->Bool {
+func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
 	WiseTracker.urlRefererCheck(sourceApplication,url: url)
 	return true
 }
