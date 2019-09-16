@@ -107,6 +107,16 @@ func application(_ application: UIApplication, open url: URL, sourceApplication:
 }
 ```
 
+OR
+
+
+```Swift
+ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+	WiseTracker.urlRefererCheck("",url: url)
+	return true
+}
+```
+
 
 ## <a id="WISETRACKER_WEBVIEW"></a> WebView 설정
 
