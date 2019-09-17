@@ -324,8 +324,11 @@ type과 id 값을 지정한 경우에만 WebView에 적용된 이벤트가 발�
 
 ## <a id="WISETRACKER_FACEBOOK"></a>Facebook 광고성과 분석을 위한 설정
 
+Facebook 광고를 통한 앱 설치와 인앱 전환 성과를 분석하기 위해서는 별도의 설정이 필요합니다.
+Facebook 광고 성과 분석 SDK가 적용되지 않는 사용자는 아래의 링크에서 설치를 진행하여 주시기 바랍니다.
+[페이스북 SDK 설치](https://developers.facebook.com/docs/app-ads/deep-linking/?locale=ko_KR#os)
 
-Facebook 광고를 통한 앱 설치와 인앱 전환 성과를 분석하기 위해서는 별도의 설정이 필요합니다. **앱에 Facebook SDK가 설치되어 있는 경우**에만 본 문서의 내용을 적용하며, 조건에 해당하지 않는 경우에는 적용하지 않아야 합니다.
+**앱에 Facebook SDK가 설치되어 있는 경우**에만 본 문서의 내용을 적용하며, 조건에 해당하지 않는 경우에는 적용하지 않아야 합니다.
 
 앱에 Facebook SDK가 설치되어 있다면, Wisetracker의 init 메서드 바로 아래에 다음 설정을 추가합니다.
 
