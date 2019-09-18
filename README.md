@@ -274,9 +274,9 @@ $ npm install --save git+https://github.com/WisetrackerTechteam/Tracker-react-pa
 필수연동 API는 Wisetracker의 기본기능을 활용하기 위해 반드시 적용해야 하는 코드들로 이루어져 있습니다. 필수연동 API의 코드들을 모두 적용할 것을 권장합니다.
 
 ### 1. StartPage(Object obj)
-화면 분석을 위한 코드로, 앱 내 컨텐츠가 노출될 때 모든 iOS Activity의 onResume()에 아래와 같이 적용 합니다.
+화면 분석을 위한 코드로, 앱 내 컨텐츠가 노출될 때 모든 iOS 모든 viewControlller의 viewWillAppear에 아래와 같이 적용 합니다.
 
-* startPage가 호출된 화면에서는는, 화면이 사라질 때 endPage가 호출되어야 합니다.
+* startPage가 호출된 화면에서는, 화면이 사라질 때 endPage가 호출되어야 합니다.
 
 ```Objective-C
 -(void)viewWillAppear:(BOOL)animated{
