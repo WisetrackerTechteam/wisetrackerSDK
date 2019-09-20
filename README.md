@@ -65,7 +65,6 @@ cmd> pod install
  
 ```Objective-C
 #import<WiseTracker/WiseTracker.h>
--(BOOL)application:(UIApplication *)applicationdidFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	[WiseTracker applicationKey:@"앱의 APPKEY 삽입"];
 	[WiseTracker setApplication:application];
 	[WiseTracker initEnd:launchOptions];
@@ -159,7 +158,7 @@ WKUserContentController* userController = [[WKUserContentController alloc]init];
 _webConfig.userContentController = userController;
 ```
 
-#### 3) 고객사가 구현한 ViewController의 didFinishNavigation에 inject 함수를 추가합니다. (기존의 webViewDidFinishLoad 함수)
+#### 3) 고객사가 구현한 ViewController의 didFinishNavigation에 inject 함수를 추가합니다.
 
 - Objective-C
 
