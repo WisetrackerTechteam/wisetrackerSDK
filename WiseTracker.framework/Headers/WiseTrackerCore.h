@@ -37,7 +37,7 @@ typedef uint_least32_t char32_t;
 typedef struct _NSZone NSZone;
 
 //WiseTracker Version
-#define WISETRACKER_SDK_VERSION @"21.3.14"
+#define WISETRACKER_SDK_VERSION @"21.3.15"
 
 @interface WiseTrackerCore : NSObject
 + (UIApplication *)application;
@@ -309,6 +309,9 @@ typedef struct _NSZone NSZone;
 
 +(void)setPushMessageData:(NSString*)pushNo pushTitle:(NSString*)title;
 +(void)setPushMessageData:(NSString*)pushNo pushTitle:(NSString*)title period:(NSInteger)period;
+
++(void)setPushMessageData:(NSString *)pushNo pushTitle:(NSString *)title application:(UIApplication *)application;
++(void)setPushMessageData:(NSString *)pushNo pushTitle:(NSString *)title period:(NSInteger)period application:(UIApplication *)application;
 
 // for UIWebView
 + (void)injectTracker:(UIWebView *)webView;
