@@ -4,10 +4,10 @@
 
 # Index
 * [WiseTracker](./README.md#DOT)
-	* [SDK 삽입과 프로젝트 설정](#WISETRACKER_INSTALL)
-		* [CocoaPod Install](#WISETRACKER_COCOAPOD)
+	* [SDK Install By CocoaPod](#WISETRACKER_INSTALL)
 	* [WebView 설정](#WISETRACKER_WEBVIEW)
 	* [필수연동 API](#WISETRACKER_BASE)
+	* [Universal Link 적용](#WISETRACKER_UNIVERSALLINK)
 	* [Facebook 광고성과 분석을 위한 설정](#WISETRACKER_FACEBOOK)
 	* [WAFI 설정](#WISETRACKER_WAFI)
 
@@ -16,10 +16,6 @@
 # WiseTracker
 
 ## <a id="WISETRACKER_INSTALL"></a> SDK 다운로드 및 설치
-
-### <a id="WISETRACKER_COCOAPOD"></a>- CocoaPod Install
-
-
 
 #### 1. XCode 프로젝트 파일중 Podfile 파일에 다음과 같이 SDK를 추가합니다.
 
@@ -30,13 +26,18 @@ pod 'WiseTracker'
 기존에 SDK를 한번 설치한 경우에는 설치할SDK 버전을 표시해야 하는 경우도 있습니다. 아래와 같이 설치할 SDK버전을 명시적으로 표시하면 됩니다.
 
 ```
-pod 'WiseTracker', '~> 21.3.6'
+pod 'WiseTracker', '~> 21.3.17'
 ```
 
 Podfile 에 해당라인을 추가한 후 Terminal 프로그램을 실행하여 다음의 명령을 수행합니다.
 ```
 cmd> pod install
 ```
+
+정상적으로 설치가 되면 아래와 같은 폴더 구조를 확인할 수 있습니다.
+
+<img src="http://www.wisetracker.co.kr/wp-content/uploads/2019/12/podOk-1.png" width="247" height="356" />
+
 
 #### 2. iOS에서 제공하는 라이브러리와 Build Settings에 설정을 추가합니다.
 ##### 1) Project – Target – BuildPhase – Link Binary With Libraries의 “+” 버튼을 클릭해 다음 4가지 라이브러리를 추가합니다.
@@ -59,12 +60,13 @@ cmd> pod install
 
 ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/6274/8379/ckfinder/images/006.png?dc=201702100619-66)
 
-#### 3) 복사한 분석코드를 SDK 적용 대상 프로젝트의 AppDelegate class – didFinishLaunchingWithOptions method에 아래와 같이 저장합니다.
+#### 3) 복사한 분석코드를 SDK 적용 대상 프로젝트의 AppDelegate의 didFinishLaunchingWithOptions 함수에 아래와 같이 적용합니다.
 
 - Objective-C : #import<WiseTracker/WiseTracker.h>
  
 ```Objective-C
-#import<WiseTracker/WiseTracker.h>
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
 	[WiseTracker applicationKey:@"앱의 APPKEY 삽입"];
 	[WiseTracker setApplication:application];
 	[WiseTracker initEnd:launchOptions];
@@ -75,7 +77,8 @@ cmd> pod install
 - Swift : import WiseTracker
 
 ```Swift
-func application(application: UIApplication, didFinishLaunchingWithOptionslaunchOptions: [NSObject: AnyObject]?) -&gt;Bool {
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+
 	WiseTracker.applicationKey("앱의 APPKEY 삽입")
 	WiseTracker.setApplication(application)
 	WiseTracker.initEnd(launchOptions)
@@ -83,10 +86,11 @@ func application(application: UIApplication, didFinishLaunchingWithOptionslaunch
 }
 ```
 
-#### 4. 광고를 통해 앱을 실행할 경우에도 패키지명, Referrer 값을 수신할 수 있도록 Project 파일에 설정정보를 추가합니다.
+#### 4. 딥링크 분석을  아래와 같이 적용합니다.
 
 - Objective-C
 
+##### iOS 4.2–9.0
 ```Objective-C
 -(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
 	[WiseTracker urlRefererCheck:sourceApplication url:url];
@@ -94,7 +98,21 @@ func application(application: UIApplication, didFinishLaunchingWithOptionslaunch
 }
 ```
 
+OR
+
+##### iOS 9.0+
+
+```Objective-C
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    [WiseTracker urlRefererCheck:@"" url:url];
+    return YES;
+
+}
+```
+
 - Swift
+
+##### iOS 4.2–9.0
 
 ```Swift
 func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
@@ -105,6 +123,7 @@ func application(_ application: UIApplication, open url: URL, sourceApplication:
 
 OR
 
+##### iOS 9.0+
 
 ```Swift
  func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
@@ -139,26 +158,60 @@ func webViewDidFinishLoad(webView :UIWebView){
 
 ### 2.WKWebView
 
-#### 1) SDK 파일에 포함되어 있는 WKInterface.js를 iosGetFkey.html과 동일한 위치에 복사합니다.
-#### 2) WKUserContentController 클래스에 WiseTracker 이벤트 핸들러를 추가합니다.
+#### WKUserContentController 클래스에 WiseTracker 이벤트 핸들러를 추가합니다.
 
 - Objective-C
 
 ```Objective-C
-// WKWebViewConfiguration 인스턴스 생성
-_webConfig = [[WKWebViewConfiguration alloc]init];
+    // WKWebViewConfiguration 인스턴스 생성
+    WKWebViewConfiguration *webConfig = [[WKWebViewConfiguration alloc]init];
+    
+    // 사용자 스크립트 삽입을 위한 WKUserContentController 인스턴스
+    WKUserContentController* userController = [[WKUserContentController alloc]init];
+    
+    // WiseTrackerHandler 추가
+    [WiseTracker addWiseTrackerHandler:userController];
+    
+    // WKUserContentController로 WKWebViewConfiguration 인스턴스 설정
+    webConfig.userContentController = userController;
+    
+    .
+    .
+    .
+    
+    self.wkWebView = [[WKWebView alloc] initWithFrame:웹킷뷰가 들어가는 프레임 configuration:webConfig]; 
+    
+    .
+    .
+    .
+```
+- Swift
 
-// 사용자 스크립트 삽입을 위한 WKUserContentController 인스턴스
-WKUserContentController* userController = [[WKUserContentController alloc]init];
+```Swift
+    // WKWebViewConfiguration 인스턴스 생성
+    let webConfig = WKWebViewConfiguration()
 
-// WiseTrackerHandler 추가
-[WiseTracker addWiseTrackerHandler:userController];
+     // 사용자 스크립트 삽입을 위한 WKUserContentController 인스턴스            
+    let userController = WKUserContentController()
 
-// WKUserContentController로 WKWebViewConfiguration 인스턴스 설정 
-_webConfig.userContentController = userController;
+     // WiseTrackerHandler 추가
+     WiseTracker.addWiseTrackerHandler(userController)
+
+     // WKUserContentController로 WKWebViewConfiguration 인스턴스 설정
+     webConfig.userContentController = userController // User Content Controller 추가
+    .
+    .
+    .
+    
+    wkWebview = WKWebView(frame: 웹킷뷰가 들어가는 프레임 , configuration: webConfig)
+    
+    .
+    .
+    .
 ```
 
-#### 3) 고객사가 구현한 ViewController의 didFinishNavigation에 inject 함수를 추가합니다.
+
+#### 고객사가 구현한 ViewController의 didFinishNavigation에 inject 함수를 추가합니다.
 
 - Objective-C
 
@@ -169,6 +222,15 @@ _webConfig.userContentController = userController;
 }
 ```
 
+- Swift
+
+```Swift
+   func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        NSLog("DEBUG_WISETRACKER didFinish navigation.")
+        WiseTracker.injectWKTracker(webView)
+```
+
+
 ## <a id="WISETRACKER_BASE"></a> 필수연동 API
 필수연동 API는 Wisetracker의 기본기능을 활용하기 위해 반드시 적용해야 하는 코드들로 이루어져 있습니다. 필수연동 API의 코드들을 모두 적용할 것을 권장합니다.
 
@@ -177,11 +239,15 @@ _webConfig.userContentController = userController;
 
 * startPage가 호출된 화면에서는, 화면이 사라질 때 endPage가 호출되어야 합니다.
 
+- Objective-C
+
 ```Objective-C
 -(void)viewWillAppear:(BOOL)animated{
 	[WiseTracker startPage:self];
 }
 ```
+
+- Swift
 
 ```Swift
 override func viewWillAppear(animated: Bool) {
@@ -193,11 +259,16 @@ override func viewWillAppear(animated: Bool) {
 
 앱 내 컨텐츠가 화면에서 사라질 때 사용합니다. 화면 분석을 위해서 가능한 모든 iOS 화면에 viewWillDisappear()에 아래와 같이 적용 합니다.
 
+
+- Objective-C
+
 ```Objective-C
 - (void)viewWillDisappear:(BOOL)animated{
 	[WiseTracker endPage:self];
 }
 ```
+
+- Swift
 
 ```Swift
 override func viewWillDisappear(animated: Bool) {
@@ -219,6 +290,45 @@ type과 id 값을 지정한 경우에만 WebView에 적용된 이벤트가 발�
 	이 곳에 분석 코드를 적용하면 됩니다.
 	**/
 </script>
+```
+
+## <a id="WISETRACKER_UNIVERSALLINK"></a> Univarsal Link 적용
+### 1. Univarsal Link 사용을 위해 Associated Domains에 WiseTracker 서비스 도메인 등록(아래 이미지 참조)
+  - applinks:cdn.wisetracker.co.kr
+  - applinks:ads.wisetracker.co.kr
+
+
+![](http://www.wisetracker.co.kr/wp-content/uploads/2019/12/associatedDomains-1024x583.png)
+
+### 2. 위 두 도메인의 서버에 apple-app-site-association에 적용할 앱의 번들 ID와 팀 ID를 당사에 전달
+![](http://www.wisetracker.co.kr/wp-content/uploads/2019/12/team-ID-%E1%84%92%E1%85%AA%E1%86%A8%E1%84%8B%E1%85%B5%E1%86%AB-1024x605.png)
+
+### 3. 앱에 아래 함수 적용
+  :  continueUserActivity 부분에 아래와 같이 적용이 되어야 유니버셜링크를 통한 광고분석이 가능합니다.
+
+- Objective-C
+
+```Objective-C
+- (BOOL)application:(UIApplication *)application continueUserActivity:(NSUserActivity* )userActivity restorationHandler:(void (^)(NSArray * _Nullable))restorationHandler{
+    [WiseTracker setApplication:application];
+    NSString* encode = [[url absoluteString] stringByReplacingOccurrencesOfString:@"%" withString:@"%%"];
+    NSString* appLink = [WiseTracker universalLinkCheck:encode];    
+    ...
+    return YES;
+}
+```
+
+- Swift
+
+```Swift
+func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
+       if let uniLink = userActivity.webpageURL?.absoluteString {
+           WiseTracker.setApplication(application)
+           let appLink = WiseTracker.universalLinkCheck(uniLink)
+           ...
+       }
+       return false;
+}
 ```
 
 ## <a id="WISETRACKER_FACEBOOK"></a>Facebook 광고성과 분석을 위한 설정
