@@ -320,4 +320,5 @@
 +(NSString*) PARAM_NPAY_ID;
 
 +(NSString*) PARAM_LAUNCHOPTIONS;
++(NSString*) OPEN_DL;
 @end

@@ -21,6 +21,7 @@
 
 @interface Tracker : NSObject<UIWebViewDelegate,WKNavigationDelegate>
 
+@property(nonatomic,retain)id tempObjCopy;
 @property(nonatomic,retain)NSMutableDictionary* pageMap;
 @property(nonatomic,retain)BSMap* currentPageMap;
 @property(nonatomic,retain)ProfileManager* profiler;
@@ -35,13 +36,14 @@
 @property(nonatomic,assign)NSTimeInterval lastSendTime;
 @property(nonatomic,assign)NSInteger dataSendMode;
 @property(nonatomic,retain)UIWebView* webView;
-//@property(nonatomic,retain)WKWebView* wkWebView;
+@property(nonatomic,retain)WKWebView* wkWebView;
 @property(nonatomic,assign)BOOL flagReferrerCheckIng;
 @property(nonatomic,assign)BOOL FLAG_OF_TrafficLimitExceeded;
 @property(nonatomic,retain)NSMutableDictionary* pushFilterSet;
 @property(nonatomic,retain)NSMutableDictionary* customPushMapData;
 @property(nonatomic,retain)NSDictionary* sarInfo;
 @property(nonatomic,assign)BOOL reqeustIAdDone;
+@property(nonatomic) BOOL fromBackGround;
 
 
 + (Tracker *)sharedInstance;
