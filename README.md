@@ -35,6 +35,11 @@ Podfile 에 해당라인을 추가한 후 Terminal 프로그램을 실행하여 
 cmd> pod install
 ```
 
+SDK 버전업데이트의 경우 다음의 명령을 수행합니다.
+```
+cmd> pod install --repo-update
+```
+
 정상적으로 설치가 되면 아래와 같은 폴더 구조를 확인할 수 있습니다.
 
 <img src="http://www.wisetracker.co.kr/wp-content/uploads/2019/12/podOk-1.png" width="247" height="356" />
