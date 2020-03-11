@@ -19,7 +19,7 @@
 #import "WisetrackerPostback.h"
 #import <WebKit/WebKit.h>
 
-@interface Tracker : NSObject<UIWebViewDelegate,WKNavigationDelegate>
+@interface Tracker : NSObject<WKNavigationDelegate>
 
 @property(nonatomic,retain)id tempObjCopy;
 @property(nonatomic,retain)NSMutableDictionary* pageMap;
@@ -35,7 +35,6 @@
 @property(nonatomic,retain)ReferrerSender* referrerSender;
 @property(nonatomic,assign)NSTimeInterval lastSendTime;
 @property(nonatomic,assign)NSInteger dataSendMode;
-@property(nonatomic,retain)UIWebView* webView;
 @property(nonatomic,retain)WKWebView* wkWebView;
 @property(nonatomic,assign)BOOL flagReferrerCheckIng;
 @property(nonatomic,assign)BOOL FLAG_OF_TrafficLimitExceeded;
@@ -113,7 +112,6 @@
 - (void)putPageMTV:(id)obj id:(NSInteger)id targetString:(NSString *)targetString;
 - (void)checkWebReferrer;
 - (void)checkReferrerSet:(NSDictionary *)jsonDic;
-- (void)webViewDidFinishLoad:(UIWebView *)webView;
 - (void)buildReferrerDicAndCheck:(NSString *)referrerString;
 - (void)setNotificationToken:(NSData *)token;
 - (BSMap *)getCurrentPageMap;

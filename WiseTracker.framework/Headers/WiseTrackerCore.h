@@ -37,7 +37,7 @@ typedef uint_least32_t char32_t;
 typedef struct _NSZone NSZone;
 
 //WiseTracker Version
-#define WISETRACKER_SDK_VERSION @"21.3.20"
+#define WISETRACKER_SDK_VERSION @"21.3.20.1"
 
 @interface WiseTrackerCore : NSObject
 + (UIApplication *)application;
