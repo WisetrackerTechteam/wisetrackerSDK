@@ -55,6 +55,7 @@
 - (NSString *)getFbSource;
 - (NSString*)getAdvId;
 - (BOOL)getAdvIdFlag;
+- (BOOL)getAidChange;
 - (void)putFbSource:(NSString *)target;
 - (void)initOrderPTime;
 - (void)setInstallReferrer;

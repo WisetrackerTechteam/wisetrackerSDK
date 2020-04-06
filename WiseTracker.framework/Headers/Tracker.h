@@ -43,7 +43,8 @@
 @property(nonatomic,retain)NSDictionary* sarInfo;
 @property(nonatomic,assign)BOOL reqeustIAdDone;
 @property(nonatomic) BOOL fromBackGround;
-
+@property(nonatomic) NSTimer *playingTimer;
+@property(nonatomic) BOOL lastPlayingCheck;
 
 + (Tracker *)sharedInstance;
 -(BSMap*)startPage:(id)obj;
@@ -161,5 +162,9 @@
 -(void)sendClickDataImmediately:(NSDictionary*) clickData;
 -(void)sendGoalDataImmediately;
 -(void)setFacebookReferrerData:(NSURL*)url;
+
+// 플레잉타임 측정 API
+- (void)onPlayStart:(NSInteger)interval;
+- (void)onPlayStop;
 
 @end

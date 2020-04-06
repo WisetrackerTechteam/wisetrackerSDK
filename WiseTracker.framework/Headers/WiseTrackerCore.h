@@ -37,7 +37,7 @@ typedef uint_least32_t char32_t;
 typedef struct _NSZone NSZone;
 
 //WiseTracker Version
-#define WISETRACKER_SDK_VERSION @"21.3.20.1"
+#define WISETRACKER_SDK_VERSION @"21.3.21"
 
 @interface WiseTrackerCore : NSObject
 + (UIApplication *)application;
@@ -392,4 +392,7 @@ typedef struct _NSZone NSZone;
 + (void)setOrderProductType5:(NSString *)type;
 + (void)setOrderProductTypeArray5:(NSArray *)type;
 
+// 플레잉타임 측정 API
++ (void)onPlayStart:(NSInteger)interval;
++ (void)onPlayStop;
 @end

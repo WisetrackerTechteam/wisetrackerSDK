@@ -99,6 +99,8 @@
 +(NSString*) PARAM_IMEI;
 +(NSString*) PARAM_ADVID;
 +(NSString*) PARAM_ADVID_FLAG;
+// IDFA 변경 추적 플래그
++(NSString*) PARAM_AID_CHANGE;
 +(NSString*) PARAM_VENID;
 +(NSString*) PARAM_SID;
 +(NSString*) PARAM_INSTALL_DATE;
@@ -321,4 +323,6 @@
 
 +(NSString*) PARAM_LAUNCHOPTIONS;
 +(NSString*) OPEN_DL;
++(NSString*) LATEST_GCM_PID;
++(NSString*) GCM_PID_UPDATE_TIME;
 @end
