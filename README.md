@@ -99,7 +99,7 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 ```
 
 ## <a id="WISETRACKER_DEEPLINK"></a> 2.유입경로 분석 적용
-### <a id="WISETRACKER_DEEPLINK"></a> 2.1 DeepLink 분석 적용
+### 2.1 DeepLink 분석 적용
 #### - 딥링크가 설정된 url 을 통해서 오픈된 이벤트를 분석합니다. 분석을 하기 위해서는 앱에 custom url scheme 이 설정되어 있어야 합니다.
 ![](http://www.wisetracker.co.kr/wp-content/uploads/2019/12/deepLinkScheme-1024x377.png)
 
@@ -159,7 +159,7 @@ OR
 #### 2.2.2 위 두 도메인의 서버에 apple-app-site-association에 적용할 앱의 번들 ID와 팀 ID를 당사에 전달
 ![](http://www.wisetracker.co.kr/wp-content/uploads/2019/12/team-ID-%E1%84%92%E1%85%AA%E1%86%A8%E1%84%8B%E1%85%B5%E1%86%AB-1024x605.png)
 
-### 2.2.3 앱에 아래 함수 적용
+#### 2.2.3 앱에 아래 함수 적용
   :  continueUserActivity 부분에 아래와 같이 적용이 되어야 유니버셜링크를 통한 광고분석이 가능합니다.
 
 - Objective-C
@@ -187,7 +187,7 @@ func application(_ application: UIApplication, continue userActivity: NSUserActi
 }
 ```
 
-### <a id="WISETRACKER_FACEBOOK"></a> 2.3 Facebook 광고성과 분석을 위한 설정
+### 2.3 Facebook 광고성과 분석을 위한 설정
 
 Facebook 광고를 통한 앱 설치와 인앱 전환 성과를 분석하기 위해서는 별도의 설정이 필요합니다.
 Facebook 광고 성과 분석 SDK가 적용되지 않는 사용자는 아래의 링크에서 설치를 진행하여 주시기 바랍니다.
@@ -265,7 +265,7 @@ FBSDKAppLinkUtility.fetchDeferredAppLink({ url, error in
 필수연동 API는 Wisetracker의 기본기능을 활용하기 위해 반드시 적용해야 하는 코드들로 이루어져 있습니다. 필수연동 API의 코드들을 모두 적용할 것을 권장합니다.
 
 ### 2.1 StartPage(Object obj)
-화면 분석을 위한 코드로, 앱 내 컨텐츠가 노출될 때 모든 iOS 모든 viewControlller의 viewWillAppear에 아래와 같이 적용 합니다.
+화면 분석을 위한 코드로 화면에 진입할때, 즉 모든 `viewControlller`의 `viewWillAppear`에 아래와 같이 적용 합니다.
 
 * startPage가 호출된 화면에서는, 화면이 사라질 때 endPage가 호출되어야 합니다.
 
@@ -287,7 +287,7 @@ override func viewWillAppear(animated: Bool) {
 
 ### 2.2 endPage(Object obj)
 
-앱 내 컨텐츠가 화면에서 사라질 때 사용합니다. 화면 분석을 위해서 가능한 모든 iOS 화면에 viewWillDisappear()에 아래와 같이 적용 합니다.
+화면이 사라질 때 사용합니다. 화면 분석을 위해서 모든 `viewControlller`의 `viewWillDisappear`에 아래와 같이 적용 합니다.
 
 
 - Objective-C
@@ -349,15 +349,7 @@ func webViewDidFinishLoad(webView :UIWebView){
     // WKUserContentController로 WKWebViewConfiguration 인스턴스 설정
     webConfig.userContentController = userController;
     
-    .
-    .
-    .
-    
     self.wkWebView = [[WKWebView alloc] initWithFrame:웹킷뷰가 들어가는 프레임 configuration:webConfig]; 
-    
-    .
-    .
-    .
 ```
 - Swift
 
@@ -373,15 +365,9 @@ func webViewDidFinishLoad(webView :UIWebView){
 
      // WKUserContentController로 WKWebViewConfiguration 인스턴스 설정
      webConfig.userContentController = userController // User Content Controller 추가
-    .
-    .
-    .
     
     wkWebview = WKWebView(frame: 웹킷뷰가 들어가는 프레임 , configuration: webConfig)
     
-    .
-    .
-    .
 ```
 
 #### 고객사가 구현한 ViewController의 didFinishNavigation에 inject 함수를 추가합니다.
@@ -403,7 +389,7 @@ func webViewDidFinishLoad(webView :UIWebView){
         WiseTracker.injectWKTracker(webView)
 ```
 
-### 4.3 WebPage(HTML) 분석 코드 적용
+### 4.3 WebPage 분석 코드 적용
 분석 대상 화면이 Native가 아닌 HTML 페이지인 경우에 분석 코드를 적용하는 방법입니다. JavaScript 코드를 사용하며, script 엘리먼트의 속성으로 type과 id 값을 아래와 같이 지정하면 됩니다.
 - type : wisetracker/text
 - id : wiseTracker
