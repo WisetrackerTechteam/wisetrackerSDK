@@ -143,7 +143,7 @@ OR
 ##### iOS 9.0+
 
 ```Swift
- func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+ func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
 	WiseTracker.urlRefererCheck("",url: url)
 	return true
 }
