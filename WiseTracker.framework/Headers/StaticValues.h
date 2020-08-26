@@ -102,6 +102,9 @@
 // IDFA 변경 추적 플래그
 +(NSString*) PARAM_AID_CHANGE;
 +(NSString*) PARAM_VENID;
+// KeyChain에 저장하는 UUID
++(NSString*) PARAM_KEYCHAIN_UUID;
++(NSString*) PARAM_UPTAfV;
 +(NSString*) PARAM_SID;
 +(NSString*) PARAM_INSTALL_DATE;
 +(NSString*) PARAM_INSTALL_TIMEMILLIS;

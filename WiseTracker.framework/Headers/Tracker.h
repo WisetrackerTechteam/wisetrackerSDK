@@ -167,4 +167,7 @@
 - (void)onPlayStart:(NSInteger)interval;
 - (void)onPlayStop;
 
+// IDFA 저장
+- (void)setIDFA:(NSString *)IDFAStr;
+
 @end

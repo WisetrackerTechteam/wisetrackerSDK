@@ -56,6 +56,7 @@
 - (NSString*)getAdvId;
 - (BOOL)getAdvIdFlag;
 - (BOOL)getAidChange;
+- (NSString *)getUptAfv;
 - (void)putFbSource:(NSString *)target;
 - (void)initOrderPTime;
 - (void)setInstallReferrer;
@@ -74,4 +75,7 @@
 -(void)markInstallReferrer;
 
 -(void)updateAdid;
+- (NSString *)getKeychainUUID;
+- (void)changeKeychainUUID;
+
 @end

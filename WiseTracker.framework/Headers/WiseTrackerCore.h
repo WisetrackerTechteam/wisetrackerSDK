@@ -28,6 +28,9 @@ FOUNDATION_EXPORT const unsigned char WiseTrackerVersionString[];
 //#include "Tracker.h"
 #import <WebKit/WebKit.h>
 
+//for Keychain
+#import "KeychainItemWrapper.h"
+
 #if defined(__has_include) && __has_include(<uchar.h>)
 # include <uchar.h>
 #elif !defined(__cplusplus) || __cplusplus < 201103L
@@ -37,7 +40,7 @@ typedef uint_least32_t char32_t;
 typedef struct _NSZone NSZone;
 
 //WiseTracker Version
-#define WISETRACKER_SDK_VERSION @"21.3.22"
+#define WISETRACKER_SDK_VERSION @"21.3.23"
 
 @interface WiseTrackerCore : NSObject
 + (UIApplication *)application;
@@ -395,4 +398,7 @@ typedef struct _NSZone NSZone;
 // 플레잉타임 측정 API
 + (void)onPlayStart:(NSInteger)interval;
 + (void)onPlayStop;
+
+// IDFA 세팅
++ (void)setIDFA:(NSString *)IDFAStr;
 @end
