@@ -170,4 +170,7 @@
 // IDFA 저장
 - (void)setIDFA:(NSString *)IDFAStr;
 
+// ATT Auth 세팅
+- (void)setATTAuthorizationStatus:(NSInteger)authStatus;
+
 @end

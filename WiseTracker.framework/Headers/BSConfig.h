@@ -18,6 +18,8 @@
 @property (nonatomic, retain) NSString * cursorElementName;
 @property (nonatomic, retain) NSString * cursorType;
 @property (nonatomic) NSFileManager * fileManager;
+@property (nonatomic) NSInteger _ATTAuthStatus;
+
 + (BSConfig *)sharedInstance;
 - (void)genUUID;
 - (instancetype)init;
@@ -69,4 +71,5 @@
 - (NSString *)getIcmpType;
 - (void)putPref:(NSString *)key value:(id)value;
 - (id)getPrefValue:(NSString *)key;
+- (void)setATTAuthStatus:(NSInteger)ATTAuthStatus;
 @end
