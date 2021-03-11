@@ -328,4 +328,8 @@
 +(NSString*) OPEN_DL;
 +(NSString*) LATEST_GCM_PID;
 +(NSString*) GCM_PID_UPDATE_TIME;
+
+//AdServices Attribution
++(NSString*) AAA_TK;
++(NSString*) AAA_TK_TIME;
 @end

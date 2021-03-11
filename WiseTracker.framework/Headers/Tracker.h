@@ -41,7 +41,7 @@
 @property(nonatomic,retain)NSMutableDictionary* pushFilterSet;
 @property(nonatomic,retain)NSMutableDictionary* customPushMapData;
 @property(nonatomic,retain)NSDictionary* sarInfo;
-@property(nonatomic,assign)BOOL reqeustIAdDone;
+@property(nonatomic,assign)BOOL requestIAdDone;
 @property(nonatomic) BOOL fromBackGround;
 @property(nonatomic) NSTimer *playingTimer;
 @property(nonatomic) BOOL lastPlayingCheck;
