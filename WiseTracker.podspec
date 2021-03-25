@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "WiseTracker"
-  s.version      = "21.3.27"
+  s.version      = "21.3.28"
   s.summary      = "SDK of WiseTracker."
   s.description  = <<-DESC
                    This is Wisetracker's SDK which tracks app and mobile attribution.
@@ -20,5 +20,5 @@ Pod::Spec.new do |s|
     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
   }
   s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  s.resources = ["iosGetFkey.html","WKInterface.js"]
+  s.resources = ["WKInterface.js"]
 end
