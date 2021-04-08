@@ -40,7 +40,7 @@ typedef uint_least32_t char32_t;
 typedef struct _NSZone NSZone;
 
 //WiseTracker Version
-#define WISETRACKER_SDK_VERSION @"21.3.28"
+#define WISETRACKER_SDK_VERSION @"21.3.30"
 
 @interface WiseTrackerCore : NSObject
 + (UIApplication *)application;
@@ -140,6 +140,10 @@ typedef struct _NSZone NSZone;
 + (void)setContents:(NSString *)value;
 + (BOOL)trkContents:(NSString *)value;
 + (void)setPageIdentity:(NSString *)value;
++ (void)setBeforePage:(NSString*)value;
++ (void)setGoalBeforePage:(NSString*)value;
++ (void)setOrderBeforePage:(NSString*)value;
+    
 + (void)setPageUrl:(NSString*)url;
 + (void)setStartWebViewLoad;
 + (void)setPageLoadTime:(long)time;
@@ -154,6 +158,7 @@ typedef struct _NSZone NSZone;
 + (void)setGender:(NSString *)gender;
 + (void)setAge:(NSString *)age;
 + (void)setUserAttribute:(NSString *)key attribute:(NSString *)attribute;
++ (void)setServiceLanguage:(NSString*)value;
 + (void)setCustomMvtTag:(NSString *)key value:(NSString *)mvtValue;
 + (void)setGoalCustomMvtTag:(NSString*) key value:(NSString*)value;
 + (void)setOrderCustomMvtTag:(NSString*) key value:(NSString*)value;
@@ -404,4 +409,9 @@ typedef struct _NSZone NSZone;
 
 // ATT Auth 세팅
 + (void)setATTAuthorizationStatus:(NSInteger)authStatus;
+
++ (void)createNewSession;
+
++ (void)putFirstInitData:(NSString *)key value:(NSString *)value;
+
 @end

@@ -140,8 +140,54 @@
 +(NSString*) PARAM_UVP3;
 +(NSString*) PARAM_UVP4;
 +(NSString*) PARAM_UVP5;
-+(NSString*) PARAM_UVP6; // MEMBER_LEVEL
-+(NSString*) PARAM_UVP7; // MEMBER_CD
++(NSString*) PARAM_UVP6;
++(NSString*) PARAM_UVP7;
++(NSString*) PARAM_UVP8;
++(NSString*) PARAM_UVP9;
++(NSString*) PARAM_UVP10;
++(NSString*) PARAM_UVP11;
++(NSString*) PARAM_UVP12;
++(NSString*) PARAM_UVP13;
++(NSString*) PARAM_UVP14;
++(NSString*) PARAM_UVP15;
++(NSString*) PARAM_UVP16;
++(NSString*) PARAM_UVP17;
++(NSString*) PARAM_UVP18;
++(NSString*) PARAM_UVP19;
++(NSString*) PARAM_UVP20;
++(NSString*) PARAM_UVP21;
++(NSString*) PARAM_UVP22;
++(NSString*) PARAM_UVP23;
++(NSString*) PARAM_UVP24;
++(NSString*) PARAM_UVP25;
++(NSString*) PARAM_UVP26;
++(NSString*) PARAM_UVP27;
++(NSString*) PARAM_UVP28;
++(NSString*) PARAM_UVP29;
++(NSString*) PARAM_UVP30;
++(NSString*) PARAM_UVP31;
++(NSString*) PARAM_UVP32;
++(NSString*) PARAM_UVP33;
++(NSString*) PARAM_UVP34;
++(NSString*) PARAM_UVP35;
++(NSString*) PARAM_UVP36;
++(NSString*) PARAM_UVP37;
++(NSString*) PARAM_UVP38;
++(NSString*) PARAM_UVP39;
++(NSString*) PARAM_UVP40;
++(NSString*) PARAM_UVP41;
++(NSString*) PARAM_UVP42;
++(NSString*) PARAM_UVP43;
++(NSString*) PARAM_UVP44;
++(NSString*) PARAM_UVP45;
++(NSString*) PARAM_UVP46;
++(NSString*) PARAM_UVP47;
++(NSString*) PARAM_UVP48;
++(NSString*) PARAM_UVP49;
++(NSString*) PARAM_UVP50;
+
++(NSString*) PARAM_SRVC_LANG;
+
 +(NSString*) PARAM_USER_ID; // USER_ID
 
 +(NSString*) PARAM_MAT_SOURCE;
@@ -189,6 +235,9 @@
 +(NSString*) PARAM_CS_P_V;
 +(NSString*) PARAM_CP;
 +(NSString*) PARAM_PI;
+
++(NSString*) PARAM_BF_PG;
+
 +(NSString*) PARAM_PNC_NM;
 +(NSString*) PARAM_PNG_NM;
 +(NSString*) PARAM_RECENT_VISIT_PTM;

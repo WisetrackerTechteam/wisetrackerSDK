@@ -95,6 +95,7 @@
 - (void)setGender:(NSString *)gender;
 - (void)setAge:(NSString *)age;
 - (void)setUserAttribute:(NSString *)key attribute:(NSString *)attribute;
+- (void)setServiceLanguage:(NSString *)value;
 - (void)putSessionData:(NSString *)key value:(NSString *)value;
 - (BSMap*)putSessionReferrer:(NSString*)referrer;
 - (BOOL)updateDocument;
@@ -172,5 +173,8 @@
 
 // ATT Auth 세팅
 - (void)setATTAuthorizationStatus:(NSInteger)authStatus;
+
+// Create New Session 추가.
+- (void)createNewSession;
 
 @end
