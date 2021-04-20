@@ -22,7 +22,7 @@ pod 'WiseTracker'
 기존에 SDK를 한번 설치한 경우에는 설치할SDK 버전을 표시해야 하는 경우도 있습니다. 아래와 같이 설치할 SDK버전을 명시적으로 표시하면 됩니다.
 
 ```
-pod 'WiseTracker', '~> 21.3.31'
+pod 'WiseTracker', '~> 21.3.32'
 ```
 
 Podfile 에 해당라인을 추가한 후 Terminal 프로그램을 실행하여 다음의 명령을 수행합니다.
