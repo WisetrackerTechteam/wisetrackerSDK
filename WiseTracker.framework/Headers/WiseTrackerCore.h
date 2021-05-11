@@ -40,7 +40,7 @@ typedef uint_least32_t char32_t;
 typedef struct _NSZone NSZone;
 
 //WiseTracker Version
-#define WISETRACKER_SDK_VERSION @"21.3.34"
+#define WISETRACKER_SDK_VERSION @"21.3.35"
 
 @interface WiseTrackerCore : NSObject
 + (UIApplication *)application;
@@ -368,6 +368,7 @@ typedef struct _NSZone NSZone;
 +(void)setOrderDateArray:(NSString*)orderDate itemCount:(NSInteger)itemCount;
 
 +(void) sendClickData:(NSString*)eventCode eventName:(NSString *)eventName;
++(void) sendJsonClickData:(NSDictionary *)dictionary;
 +(void) sendGoalData;
 +(void)setFacebookReferrerData:(NSURL*)url;
 

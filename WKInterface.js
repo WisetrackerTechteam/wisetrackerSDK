@@ -14,6 +14,11 @@ var WiseTracker = {
         var messgeToPost = {"function":"sendTransaction"};
         window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
     },
+    /** createNewSession **/
+    createNewSession:function(){
+        var messgeToPost = {"function":"createNewSession"};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
     /** setAdChannel **/
     setAdChannel:function(code){
         var messgeToPost = {"function":"setAdChannel", "code":code};
@@ -88,6 +93,11 @@ var WiseTracker = {
         var messgeToPost = {"function":"setUserAttribute","key":key, "value":value};
         window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
     },
+    /** setServiceLanguage **/
+    setServiceLanguage:function(value){
+        var messgeToPost = {"function":"setServiceLanguage","value":value};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
     /** setContents **/
     setContents:function(cont){
         var messgeToPost = {"function":"setContents", "cont":cont};
@@ -100,6 +110,21 @@ var WiseTracker = {
     /** setPageIdentity **/
     setPageIdentity:function(pi){
         var messgeToPost = {"function":"setPageIdentity", "pi":pi};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    /** setBeforePage **/
+    setBeforePage:function(value){
+        var messgeToPost = {"function":"setBeforePage", "value":value};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    /** setGoalBeforePage **/
+    setGoalBeforePage:function(value){
+        var messgeToPost = {"function":"setGoalBeforePage", "value":value};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    /** setOrderBeforePage **/
+    setOrderBeforePage:function(value){
+        var messgeToPost = {"function":"setOrderBeforePage", "value":value};
         window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
     },
     setPageIdentityById:function(pageId,pi){
@@ -451,6 +476,10 @@ var WiseTracker = {
     /** click event **/
     sendClickData:function(eventCode, eventName){
         var messgeToPost = {"function":"sendClickData","eventCode":eventCode, "eventName":eventName};
+        window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
+    },
+    sendJsonClickData:function(dictionary){
+        var messgeToPost = {"function":"sendJsonClickData","dictionary":JSON.parse(dictionary)};
         window.webkit.messageHandlers.WiseTracker.postMessage(messgeToPost);
     },
     /** sendTransaction **/
