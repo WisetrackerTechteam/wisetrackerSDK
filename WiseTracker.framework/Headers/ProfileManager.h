@@ -174,4 +174,5 @@
 - (NSString *)getKeychainUUID;
 - (void)changeKeychainUUID;
 
+-(void)updateAdidWithATT;;
 @end
