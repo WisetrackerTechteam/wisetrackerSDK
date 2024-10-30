@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "WiseTracker"
-  s.version      = "21.3.36"
+  s.version      = "21.3.37"
   s.summary      = "SDK of WiseTracker."
   s.description  = <<-DESC
                    This is Wisetracker's SDK which tracks app and mobile attribution.
@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.homepage     = "http://www.wisetracker.co.kr"
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.author       = { "Wisetracker" => "tech@wisetracker.co.kr" }
-  s.ios.deployment_target = "9.3"
+  s.ios.deployment_target = "12.0"
   s.author             = { "Wisetracker" => "tech@wisetracker.co.kr" }
 
 
